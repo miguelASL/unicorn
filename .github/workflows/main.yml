@@ -3,7 +3,7 @@ name: Update Wiki
 on:
   push:
     branches:
-      - master  # o la rama que desees
+      - main  # o la rama que desees
 
 jobs:
   update_wiki:
