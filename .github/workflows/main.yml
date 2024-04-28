@@ -7,7 +7,7 @@ on:
 
 jobs:
   update_wiki:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -16,8 +16,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          mkdir wiki
-          echo "# Welcome to my Wiki" > wiki/Home.md
+          New-Item -ItemType Directory -Force -Path wiki
+          Set-Content wiki/Home.md "# Welcome to my Wiki"
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git add .
