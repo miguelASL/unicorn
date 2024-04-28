@@ -22,4 +22,5 @@ jobs:
           git config --global user.name "GitHub Actions"
           git add .
           git commit -m "Update Wiki"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/miguelASL/unicorn.git
           git push
